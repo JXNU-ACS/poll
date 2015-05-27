@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <title>ACS文化衫投票 - {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <header class="main-header">
+        <img class="main-header__avatar" src="{% static "img/kdwycz.png" %}" alt="">
+        <h1>ACS文化衫投票 by kdwycz</h1>
+      </header>
+
+      <section class="info-section whatido">
+          {% block content %}{% endblock %}
+      </section>
+
+    </div>
+
+  </body>
+</html>

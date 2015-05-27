@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}主页{% endblock %}
+
+{% block content %}
+    <h2>你喜欢哪种样式的T恤</h2>
+    <form method="POST">
+        {% csrf_token %}
+        姓名:
+        <input name="name" type="text">
+        <br>
+        学号:
+        <input name="number" type="text">
+        <br>
+        <button type="submit">提交</button>
+        <br>
+        <div class="shirt">
+            白色-正面-1:
+            <input type="radio" name="z" value="zw1" checked="checked">
+            <br>
+            <img class="" src="{% static "img/zw1.png" %}" alt="">
+            <br>
+            白色-正面-2:
+            <input type="radio" name="z" value="zw2">
+            <br>
+            <img class="" src="{% static "img/zw2.png" %}" alt="">
+            <br>
+            绿色-正面-1:
+            <input type="radio" name="z" value="zg1">
+            <br>
+            <img class="" src="{% static "img/zg1.png" %}" alt="">
+            <br>
+            绿色-正面-2:
+            <input type="radio" name="z" value="zg2">
+            <br>
+            <img class="" src="{% static "img/zg2.png" %}" alt="">
+            <br>
+            绿色-正面-3:
+            <input type="radio" name="z" value="zg3">
+            <br>
+            <img class="" src="{% static "img/zg3.png" %}" alt="">
+            <br>
+        </div>
+        <br>
+        <div class="shirt">
+            白色-反面-1:
+            <input type="radio" name="f" value="fw1" checked="checked">
+            <br>
+            <img class="" src="{% static "img/fw1.png" %}" alt="">
+            <br>
+            白色-反面-2:
+            <input type="radio" name="f" value="fw2">
+            <br>
+            <img class="" src="{% static "img/fw2.png" %}" alt="">
+            <br>
+            绿色-反面-1:
+            <input type="radio" name="f" value="fg1">
+            <br>
+            <img class="" src="{% static "img/fg1.png" %}" alt="">
+            <br>
+            绿色-反面-2:
+            <input type="radio" name="f" value="fg2">
+            <br>
+            <img class="" src="{% static "img/fg2.png" %}" alt="">
+            <br>
+        </div>
+    </form>
+
+{%  endblock %}
